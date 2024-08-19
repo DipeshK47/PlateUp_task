@@ -18,7 +18,7 @@ Before you start, ensure that you have the following installed:
    If you haven’t already, clone the repository to your local machine:
 
    ```bash
-   git clone <[repository-url](https://github.com/DipeshK47/PlateUp_task)>
+   git clone https://github.com/DipeshK47/PlateUp_task
    ```
 
 2. **Navigate to the Project Directory**
