@@ -1,7 +1,7 @@
 
 ```markdown
 # React Project Installation and Running Guide
-
+```
 Welcome to the Vite project! Follow these steps to set up and run the project on your local machine.
 
 ## Prerequisites
