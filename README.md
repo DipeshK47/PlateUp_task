@@ -1,7 +1,6 @@
-Here's a `README.md` template for installing and running your Vite project. Feel free to customize it according to your project's specifics:
 
 ```markdown
-# Vite Project Installation and Running Guide
+# React Project Installation and Running Guide
 
 Welcome to the Vite project! Follow these steps to set up and run the project on your local machine.
 
