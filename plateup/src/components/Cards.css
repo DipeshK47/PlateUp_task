@@ -1,0 +1,205 @@
+.button-group-with-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.button-group {
+    display: flex;
+    gap: 13px; /* Gap between buttons */
+    justify-content: center; /* Center align buttons horizontally */
+    /* Space between buttons and cards */
+    top: 555px;
+    left: -95px;
+}
+
+.button {
+    padding: 4px 12px; /* Adjusted padding to fit content */
+    border: 1px solid #000; /* Border color */
+    border-radius: 26.25px; /* Rounded corners */
+    font-size: 15px; /* Adjusted font size to fit content */
+    color: #000; /* Default text color */
+    background-color: #fff; /* Default background color */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; /* Prevent content overflow */
+    text-align: center; /* Center text horizontally */
+    display: inline-block; /* Adjust width based on content */
+    min-width: 31px; /* Minimum width for the first button */
+}
+
+.button:nth-of-type(n+2):nth-of-type(-n+6) {
+    width: auto; /* Let width adjust based on content */
+    max-width: 157px; /* Limit the maximum width for other buttons */
+}
+
+.button:hover {
+    background-color: #f0f0f0; /* Light background on hover */
+}
+
+.button.active {
+    background-color: #000; /* Background color when clicked */
+    color: #fff; /* Text color when clicked */
+}
+
+.cards-wrapper {
+    position: relative;
+    width: calc(493px * 2 + 493px / 2); /* Width for showing 2.5 cards */
+    overflow: hidden; /* Hide cards that are outside this width */
+    top: 580px;
+    padding-bottom: 50px; /* Added padding at the bottom to create space */
+}
+
+.card {
+    width: 493px;
+    height: 485px;
+    flex-shrink: 0; /* Prevent shrinking */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    margin-right: 23px; /* Increased spacing between cards */
+    opacity: 1;
+    transform: scale(1);
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Increased opacity to 0.25 */
+}
+
+.cards-container {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    gap: 7px; /* Ensure the gap is consistent with card spacing */
+    padding-left: 85px;
+    padding-top: 30px;
+}
+
+.card.highlighted {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+}
+
+.card-image {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 20px; /* Adjust the border radius as needed */
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Navigation buttons (assuming they are already added) */
+.nav-buttons-container {
+    position: absolute;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+    bottom: 17px;
+}
+
+.nav-button {
+    background-color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-size: 18px 18px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.nav-button-left {
+    background-image: url('https://img.icons8.com/?size=100&id=85099&format=png&color=000000'); /* Left arrow icon */
+}
+
+/* Style for the right navigation button */
+.nav-button-right {
+    background-image: url('https://img.icons8.com/?size=100&id=86520&format=png&color=000000'); /* Right arrow icon */
+}
+.nav-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* For Mobile View */
+/* Styles for mobile view */
+
+/* For Mobile View */
+
+
+/* Styles for mobile view */
+@media (max-width: 768px) {
+    .button-group-with-cards {
+       top: -100px;
+    }
+
+    .cards-wrapper {
+        position: absolute; /* Position cards on top */
+        top: 0; /* Align cards to the top */
+        left: 0; /* Align cards to the left */
+        right: 0; /* Align cards to the right */
+        height: 485px; /* Fixed height to fit the card */
+        width: 100%; /* Full width for mobile */
+        z-index: 10; /* Ensure cards are above other content */
+        overflow: hidden; /* Hide overflow */
+        display: flex;
+        align-items: center; /* Center align the cards vertically */
+        justify-content: center; /* Center align the cards horizontally */
+        padding: 0; /* Remove padding */
+    }
+
+    .cards-container {
+        display: flex;
+        flex-direction: row;
+        transition: transform 0.3s ease-in-out;
+        gap: 10px; /* No gap between cards */
+        padding: 0; /* No padding */
+        margin: 0; /* No margin */
+        align-items: center; /* Center items vertically */
+        position: relative; /* Required for swipe effect */
+        width: auto; /* Adjust width based on content */
+        left: 155px;
+       
+    }
+
+    .card {
+        width: 282px; /* Center card width */
+        height: 450px; /* Center card height */
+        margin-right: 20px; /* Space between cards */
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        opacity: 1;
+        transform: scale(1);
+        border-radius: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        flex-shrink: 0; /* Prevent shrinking */
+        padding: 0 10px 20px; /* Padding from right, left, and bottom */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; /* Center content inside the card */
+        overflow: hidden; /* Ensure content stays within card boundaries */
+    }
+
+    .card.highlighted {
+        transform: scale(1.2); /* Enlarge the center card */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+    }
+
+    /* Hide navigation buttons on mobile view */
+    .nav-buttons-container {
+        display: none; /* Hide navigation buttons on mobile view */
+    }
+}

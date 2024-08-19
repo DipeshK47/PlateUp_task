@@ -1,0 +1,127 @@
+.container {
+  display: flex;
+  width: 50%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0px;
+  overflow: hidden;
+  margin: 0;
+  padding: 25px;
+  clip-path: polygon(0 0, 100% 0, 100% 76%, 0 80%);
+  
+}
+
+.column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 50%;
+  height: 200%;
+  overflow: hidden;
+  margin-right: 10px;
+  
+}
+
+.column:nth-of-type(2) {
+  margin-left: 10px;
+}
+
+.imageContainer {
+  position: relative;
+  margin: 15px;
+  height: 50%;
+  width: 100%;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  max-height: none;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.column:nth-of-type(2)::before {
+  content: '';
+  position: fixed;
+  top: 50%;
+  left: 35%;
+  width: 318px;
+  height: 313px;
+  background: radial-gradient(ellipse at center, rgba(251, 241, 220, 0.95), transparent);
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  pointer-events: none;
+  filter: blur(15px);
+}
+
+@keyframes moveTopToBottom {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes moveBottomToTop {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(50%);
+  }
+}
+
+.column:nth-of-type(1) .imageContainer {
+  animation: moveTopToBottom 10s linear infinite;
+}
+
+.column:nth-of-type(2) .imageContainer {
+  animation: moveBottomToTop 10s linear infinite;
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    overflow: hidden;
+    clip-path: none; 
+    padding: 0; 
+    justify-content: flex-start; 
+    top: 670px;
+  }
+
+  .column {
+    flex: none;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row; 
+    margin: 0;
+    overflow: hidden;
+    justify-content: flex-start; 
+    animation: moveRightToLeft 10s linear infinite; 
+  }
+
+  .imageContainer {
+    flex-shrink: 0;
+    width: 200px; 
+    height: auto;
+    margin: 10px;
+    border-radius: 20px;
+  }
+
+  @keyframes moveRightToLeft {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.input-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    height: 40px;
+    flex: 1;
+}
+
+.input-logo {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+}
+
+.input-field {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 8px 8px 8px 40px;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .input-box {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .input-field {
+        padding: 8px 8px 8px 30px;
+    }
+}

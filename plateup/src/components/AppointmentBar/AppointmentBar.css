@@ -1,0 +1,59 @@
+.appointment-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 445px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75.5%;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+.find-now-button {
+    background: linear-gradient(135deg, #4683D0, #7CD0A2);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.find-now-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+.find-now-button:hover {
+    background: linear-gradient(135deg, #3b6baf, #6fbf8f);
+}
+
+@media (max-width: 768px) {
+    .appointment-bar {
+        flex-direction: column;
+        align-items: center;
+        width: 85%;
+        padding: 15px;
+        top: 365px;
+        gap: 10px;
+        margin: 0 auto;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .find-now-button {
+        background: #4683D0;
+        width: 100%;
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

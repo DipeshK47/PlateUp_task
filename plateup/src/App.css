@@ -1,0 +1,107 @@
+.booking-container {
+  position: absolute;
+  height: auto; 
+  top: 35%;
+  right: 20%;
+  transform: translate(50%, -50%);
+  padding: 40px;
+  border-radius: 15px;
+  width: 800px;
+}
+
+h1, h2, h3 {
+  font-family: sans-serif;
+}
+
+h1 {
+  font-size: 3rem !important;
+  color: #333;
+}
+
+h2 {
+  font-size: 3rem !important;
+  line-height: 1.2 !important;
+  color: #444;
+}
+
+h3 {
+  font-size: 1.125rem !important;
+  color: #6f6f6f;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  margin: 2.5rem 0 0 !important;
+}
+
+.highlight {
+  color: black;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #1173B3, #0CB9B3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+
+@media (max-width: 768px) {
+  .booking-container {
+    position: relative;
+    top: auto;
+    right: auto;
+    transform: none;
+    margin-top: 56px;
+    padding: 20px;
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  h1 {
+    font-size: 2rem !important;
+  }
+
+  h3 {
+    font-size: 1rem !important;
+  }
+}
+body {
+  margin: 0;
+}
+.button-group {
+  display: flex;
+  gap: 13px;
+  justify-content: center;
+  position: relative;
+}
+
+.button {
+  width: 100px;
+  height: 31px;
+  padding: 5px 16px;
+  border: 1px solid #000;
+  border-radius: 26.25px;
+  font-size: 16px;
+  color: #000;
+  background-color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button:hover {
+  background-color: #f0f0f0;
+}
+
+.button.active {
+  background-color: #000;
+  color: #fff;
+}
+
+body {
+  
+  overflow-x: hidden;
+}

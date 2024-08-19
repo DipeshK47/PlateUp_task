@@ -1,0 +1,58 @@
+.how-it-works {
+  position: relative;
+  bottom: -720px;
+  left: 0;
+  margin-left: 175px;
+  margin-bottom: 150px;
+  color: #000;
+  padding-bottom: 50px;
+}
+
+
+.how-it-works h2 {
+  font-size: 16px !important;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+
+.how-it-works p {
+  font-size: 28px !important;
+  letter-spacing: 1.2px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+
+.how-it-works .italic-gradient {
+  font-style: italic;
+  background: linear-gradient(90deg, #F1CA72, #D96E6C);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.how-it-works .regular-text {
+  color: #707070;
+}
+
+
+@media (max-width: 768px) {
+  .how-it-works {
+      position: static;
+      margin-left: 0;
+      margin-bottom: 50px;
+      text-align: center;
+  }
+
+  .how-it-works h2 {
+      font-size: 16px !important;
+      margin-bottom: 15px;
+      margin-top: 700px;
+  }
+
+  .how-it-works p {
+      font-size: 20px !important;
+      line-height: 30px;
+  }
+}
